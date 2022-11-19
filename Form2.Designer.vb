@@ -147,11 +147,15 @@ Partial Class Form2
         Me.MdiChildrenMinimizedAnchorBottom = False
         Me.MinimizeBox = False
         Me.Name = "Form2"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "`"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Maksimal 2 digit sih"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
+    End Sub
+
+    Protected Overrides Sub Finalize()
+        MyBase.Finalize()
     End Sub
 
     Friend WithEvents Judul As Label
@@ -162,4 +166,13 @@ Partial Class Form2
     Friend WithEvents BTN_Batal As Button
     Friend WithEvents BTN_Kosongkan As Button
     Friend WithEvents BTN_Hitung As Button
+
+    Public Sub New()
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+
+    End Sub
 End Class
